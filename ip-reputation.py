@@ -8,7 +8,7 @@ def lookup_ip(ip_address: str) -> str:
     """
     url = f"https://www.virustotal.com/api/v3/ip_addresses/{ip_address}"
     headers = {
-        "x-apikey": "4fa388d02b79475154411d8499639cb4789f70879c4b8d524125cd8cc5de0293"
+        "x-apikey": "YOUR-API-KEY"
     }
     try:
         response = requests.get(url, headers=headers)
@@ -45,7 +45,7 @@ def lookup_url(url: str) -> str:
     encoded_url = requests.utils.quote(url)
     url = f"https://www.virustotal.com/api/v3/urls/{encoded_url}"
     headers = {
-        "x-apikey": "4fa388d02b79475154411d8499639cb4789f70879c4b8d524125cd8cc5de0293"
+        "x-apikey": "YOUR-API-KEY"
     }
     try:
         response = requests.get(url, headers=headers)
